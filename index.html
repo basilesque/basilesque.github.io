@@ -12,65 +12,12 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Roboto:ital,wght@0,300;1,100;1,300&display=swap"
         rel="stylesheet">
-    <style>
-        * {
-            font-family: 'Caprasimo', cursive;
-            font-weight: 400;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            height: 100%;
-        }
-
-        body {
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        button {
-            text-shadow: 1px 1px 3px rgb(100, 100, 100);
-            margin: 1em;
-            padding: 1em;
-            border-radius: 1em;
-            font-size: 2em;
-            border-style: none;
-        }
-
-        button:hover {
-            box-shadow: 0 0.5em 0.5em -0.4em black;
-            transform: translateY(-0.04em);
-            cursor: pointer;
-        }
-
-        button:active {
-            transform: translateY(0.04em);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <button id="randomise-btn" onclick="changeBackground()">click to change background color!!</button>
-    <script>
-
-        function changeBackground() {
-            let redValue = (Math.floor(Math.random() * 256));
-            let greenValue = (Math.floor(Math.random() * 256));
-            let blueValue = (Math.floor(Math.random() * 256));
-            document.body.style.background = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
-            // document.getElementById("randomise-btn").style.color = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
-
-            let oppositeRed = 255 - redValue;
-            let oppositeGreen = 255 - greenValue;
-            let oppositeBlue = 255 - blueValue;
-            document.getElementById("randomise-btn").style.background = `rgb(${oppositeRed}, ${oppositeGreen}, ${oppositeBlue})`;
-        };
-
-    </script>
+    <script src="app.js"></script>
 </body>
 
 </html>
